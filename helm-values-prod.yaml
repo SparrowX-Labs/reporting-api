@@ -1,0 +1,33 @@
+projectName: sparrowx
+environment: prod
+
+serviceName: reporting-api
+
+replicaCount: 1
+
+appPort: 8000
+# extraAnnotations:
+# extraLabels:
+
+resources:
+  size: medium
+
+
+database:
+  enabled: true
+  name: reportingdb
+  engine: postgres
+  port: 5432
+  host: reportingdb-postgres.prod.sparrowx.internal
+
+
+servicemonitor:
+  enabled: true
+
+probePath: /health
+livenessProbe:
+  enabled: true
+readinessProbe:
+  enabled: true
+startupProbe:
+  enabled: true

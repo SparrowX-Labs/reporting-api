@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: reporting-api
+  description: reporting-api backend API
+  annotations:
+    backstage.io/kubernetes-id: reporting-api
+    github.com/project-slug: SparrowX-Labs/reporting-api
+  tags:
+    - reporting-api
+    - application
+    - backend
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:platform-team
