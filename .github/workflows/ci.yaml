@@ -29,7 +29,6 @@ jobs:
     uses: SparrowX-Labs/workflows-templates/.github/workflows/build.yaml@v2.0.0
     with:
       env-params-file: helm-values-dev.yaml
-
       authoritative-build: true
 
   image-security-scan:
