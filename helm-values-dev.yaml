@@ -12,15 +12,6 @@ appPort: 8000
 resources:
   size: medium
 
-
-database:
-  enabled: true
-  name: reportingdb
-  engine: postgres
-  port: 5432
-  host: reportingdb-postgres.dev.sparrowx.internal
-
-
 servicemonitor:
   enabled: true
 
@@ -31,3 +22,14 @@ readinessProbe:
   enabled: true
 startupProbe:
   enabled: true
+
+container:
+  env:
+    - name: CUSTOMER_API_URL
+      value: "http://customer-api:8000"
+    - name: TASK_API_URL
+      value: "http://task-api:8000"
+    - name: BILLING_API_URL
+      value: "http://billing-api:8000"
+    - name: UPSTREAM_TIMEOUT_SECONDS
+      value: "5"
