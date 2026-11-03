@@ -26,10 +26,10 @@ startupProbe:
 container:
   env:
     - name: CUSTOMER_API_URL
-      value: "http://customer-api:8000"
+      value: "http://customer-api:80"
     - name: TASK_API_URL
-      value: "http://task-api:8000"
+      value: "http://task-api:80"
     - name: BILLING_API_URL
-      value: "http://billing-api:8000"
+      value: "http://billing-api:80"
     - name: UPSTREAM_TIMEOUT_SECONDS
       value: "5"
